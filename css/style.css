@@ -1,0 +1,842 @@
+/* line 1, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/main */
+html {
+  background-color: #f5f5f5;
+  font-family: Helvetica, Arial, sans-serif; }
+
+/* line 7, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/main */
+.primary-btn {
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  margin: 1em;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 150ms ease-in-out; }
+  /* line 11, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/mixins */
+  .primary-btn:hover {
+    background-color: #2980b9; }
+
+/* line 11, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/main */
+.secondary-btn {
+  background-color: #ccc;
+  color: #000;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  margin: 1em;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 150ms ease-in-out; }
+  /* line 11, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/mixins */
+  .secondary-btn:hover {
+    background-color: #aaa; }
+
+/* line 15, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/main */
+.border {
+  border: 1px solid #ccc; }
+  /* line 17, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/main */
+  .border p {
+    color: green; }
+
+@font-face {
+  font-family: 'exercise1-font';
+  src: url('../fonts/exercise1-font.eot?71941720');
+  src: url('../fonts/exercise1-font.eot?71941720#iefix') format('embedded-opentype'), url('../fonts/exercise1-font.woff?71941720') format('woff'), url('../fonts/exercise1-font.ttf?71941720') format('truetype'), url('../fonts/exercise1-font.svg?71941720#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?71941720#fontello') format('svg');
+  }
+}
+*/
+/* line 22, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/exercise1-font */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "exercise1-font";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 7em;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 2em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+/* line 54, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/exercise1-font */
+.icon-folder-empty:before {
+  content: '\e801'; }
+
+/* 'î ' */
+/* line 55, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/exercise1-font */
+.icon-link:before {
+  content: '\e802'; }
+
+/* 'î ‚' */
+/* line 56, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/exercise1-font */
+.icon-moon:before {
+  content: '\e803'; }
+
+/* 'î ƒ' */
+/* line 57, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/exercise1-font */
+.icon-paper-plane-empty:before {
+  content: '\e804'; }
+
+/* 'î „' */
+/* line 58, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/exercise1-font */
+.icon-sun:before {
+  content: '\e805'; }
+
+/* 'î …' */
+/* line 59, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/exercise1-font */
+.icon-test:before {
+  content: '\e806'; }
+
+/* 'î †' */
+/* CSS Document */
+/* line 4, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.grid {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizespeed;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+/* line 16, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.grid-bottom {
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end; }
+
+/* line 22, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.grid-middle {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+/* line 28, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.grid-stretch {
+  -webkit-align-items: stretch;
+  -ms-align-items: stretch;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
+
+/* line 34, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.opera-only :-o-prefocus, .grid {
+  word-spacing: -0.43em; }
+
+/* line 39, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit {
+  letter-spacing: normal;
+  text-rendering: auto;
+  vertical-align: top;
+  word-spacing: normal;
+  display: inline-block;
+  visibility: visible;
+  text-align: center; }
+
+/* line 49, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.grid-bottom .unit {
+  vertical-align: bottom; }
+
+/* line 53, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.grid-middle .unit {
+  vertical-align: middle; }
+
+/* line 58, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit[class*="push-"], .unit[class*="pull-"] {
+  position: relative; }
+
+/* line 62, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-hidden {
+  display: none;
+  visibility: hidden; }
+
+/* line 67, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-centered {
+  margin: 0 auto; }
+
+/* line 71, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-1 {
+  display: block;
+  visibility: visible;
+  width: 100%; }
+
+/* line 77, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-offset-xs-0 {
+  margin-left: 0; }
+
+/* line 82, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-push-xs-0, .unit-pull-xs-0 {
+  left: 0; }
+
+/* line 86, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-1-2 {
+  width: 50%; }
+
+/* line 90, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-offset-xs-1-2 {
+  margin-left: 50%; }
+
+/* line 94, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-push-xs-1-2 {
+  left: 50%; }
+
+/* line 98, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-pull-xs-1-2 {
+  left: -50%; }
+
+/* line 102, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-1-3 {
+  width: 33.3333%; }
+
+/* line 106, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-offset-xs-1-3 {
+  margin-left: 33.3333%; }
+
+/* line 110, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-push-xs-1-3 {
+  left: 33.3333%; }
+
+/* line 114, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-pull-xs-1-3 {
+  left: -33.3333%; }
+
+/* line 118, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-2-3 {
+  width: 66.6667%; }
+
+/* line 122, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-offset-xs-2-3 {
+  margin-left: 66.6667%; }
+
+/* line 126, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-push-xs-2-3 {
+  left: 66.6667%; }
+
+/* line 130, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-pull-xs-2-3 {
+  left: -66.6667%; }
+
+/* line 134, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-1-4 {
+  width: 25%; }
+
+/* line 138, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-offset-xs-1-4 {
+  margin-left: 25%; }
+
+/* line 142, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-push-xs-1-4 {
+  left: 25%; }
+
+/* line 146, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-pull-xs-1-4 {
+  left: -25%; }
+
+/* line 150, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-3-4 {
+  width: 75%; }
+
+/* line 154, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-offset-xs-3-4 {
+  margin-left: 75%; }
+
+/* line 158, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-push-xs-3-4 {
+  left: 75%; }
+
+/* line 162, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-pull-xs-3-4 {
+  left: -75%; }
+
+/* line 166, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+.unit-xs-1-2, .unit-xs-1-3, .unit-xs-2-3, .unit-xs-1-4, .unit-xs-3-4 {
+  display: inline-block;
+  visibility: visible; }
+
+/* line 171, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+unit-xs-90 {
+  width: 90%; }
+
+@media only screen and (min-width: 25em) {
+  /* line 177, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-hidden {
+    display: none;
+    visibility: hidden; }
+
+  /* line 182, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-centered {
+    margin: 0 auto; }
+
+  /* line 186, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-1 {
+    display: block;
+    visibility: visible;
+    width: 100%; }
+
+  /* line 192, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-s-0 {
+    margin-left: 0; }
+
+  /* line 197, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-s-0, .unit-pull-s-0 {
+    left: 0; }
+
+  /* line 201, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-1-2 {
+    width: 49%; }
+
+  /* line 205, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-s-1-2 {
+    width: 49%; }
+
+  /* line 209, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-1-2-top {
+    width: 49%; }
+
+  /* line 213, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-s-1-2 {
+    left: -50%; }
+
+  /* line 217, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-1-3 {
+    width: 33.3333%; }
+
+  /* line 221, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-s-1-3 {
+    margin-left: 33.3333%; }
+
+  /* line 225, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-s-1-3 {
+    left: 33.3333%; }
+
+  /* line 229, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-s-1-3 {
+    left: -33.3333%; }
+
+  /* line 233, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-2-3 {
+    width: 66.6667%; }
+
+  /* line 237, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-s-2-3 {
+    margin-left: 66.6667%; }
+
+  /* line 241, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-s-2-3 {
+    left: 66.6667%; }
+
+  /* line 245, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-s-2-3 {
+    left: -66.6667%; }
+
+  /* line 249, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-1-4 {
+    width: 25%; }
+
+  /* line 253, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-s-1-4 {
+    margin-left: 25%; }
+
+  /* line 257, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-s-1-4 {
+    left: 25%; }
+
+  /* line 261, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-s-1-4 {
+    left: -25%; }
+
+  /* line 265, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-3-4 {
+    width: 75%; }
+
+  /* line 269, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-s-3-4 {
+    margin-left: 75%; }
+
+  /* line 273, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-s-3-4 {
+    left: 75%; }
+
+  /* line 277, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-s-3-4 {
+    left: -75%; }
+
+  /* line 281, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-s-1-2, .unit-s-1-3, .unit-s-2-3, .unit-s-1-4, .unit-s-3-4 {
+    display: inline-block;
+    visibility: visible; }
+
+  /* line 286, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  unit-s-90 {
+    width: 90%; }
+ }
+
+@media only screen and (min-width: 38em) {
+  /* line 293, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-hidden {
+    display: none;
+    visibility: hidden; }
+
+  /* line 298, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-centered {
+    margin: 0 auto; }
+
+  /* line 302, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-1 {
+    visibility: visible;
+    width: 100%; }
+
+  /* line 307, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-1-over {
+    bottom: 10;
+    visibility: visible;
+    width: 100%; }
+
+  /* line 313, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-m-0 {
+    margin-left: 0; }
+
+  /* line 318, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-m-0, .unit-pull-m-0 {
+    left: 0; }
+
+  /* line 322, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-1-2 {
+    width: 50%; }
+
+  /* line 326, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-m-1-2 {
+    margin-left: 50%; }
+
+  /* line 330, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-m-1-2 {
+    left: 50%; }
+
+  /* line 334, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-m-1-2 {
+    left: -50%; }
+
+  /* line 338, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-1-3 {
+    width: 32.7%;
+    top: 0; }
+
+  /* line 343, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-1-3-top {
+    width: 32.7%; }
+
+  /* line 347, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-m-1-3 {
+    margin-left: 33.3333%; }
+
+  /* line 351, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-m-1-3 {
+    width: 33%; }
+
+  /* line 355, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-m-1-3-right {
+    width: 33%; }
+
+  /* line 359, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-m-1-3 {
+    left: -33.3333%; }
+
+  /* line 363, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-2-3 {
+    width: 66.6667%; }
+
+  /* line 367, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-m-2-3 {
+    margin-left: 66.6667%; }
+
+  /* line 371, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-m-2-3 {
+    left: 66.6667%; }
+
+  /* line 375, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-m-2-3 {
+    left: -66.6667%; }
+
+  /* line 379, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-1-4 {
+    width: 25%; }
+
+  /* line 383, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-m-1-4 {
+    margin-left: 25%; }
+
+  /* line 387, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-m-1-4 {
+    left: 25%; }
+
+  /* line 391, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-m-1-4 {
+    left: -25%; }
+
+  /* line 395, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-3-4 {
+    width: 75%; }
+
+  /* line 399, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-m-3-4 {
+    margin-left: 75%; }
+
+  /* line 403, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-m-3-4 {
+    left: 75%; }
+
+  /* line 407, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-m-3-4 {
+    left: -75%; }
+
+  /* line 411, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-m-1-2, .unit-m-1-3, .unit-m-2-3, .unit-m-1-4, .unit-m-3-4 {
+    display: inline-block;
+    visibility: visible; }
+
+  /* line 416, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  unit-m-90 {
+    width: 90%; }
+ }
+
+@media only screen and (min-width: 60em) {
+  /* line 423, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-hidden {
+    display: none;
+    visibility: hidden; }
+
+  /* line 428, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-centered {
+    margin: 0 auto; }
+
+  /* line 432, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-1 {
+    visibility: visible;
+    width: 100%; }
+
+  /* line 437, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-1-over {
+    visibility: visible;
+    width: 100%; }
+
+  /* line 444, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-l-0 {
+    margin-left: 0; }
+
+  /* line 449, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-l-0, .unit-pull-l-0 {
+    left: 0; }
+
+  /* line 453, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-1-2 {
+    width: 50%; }
+
+  /* line 457, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-l-1-2 {
+    margin-left: 50%; }
+
+  /* line 461, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-l-1-2 {
+    left: 50%; }
+
+  /* line 465, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-l-1-2 {
+    left: -50%; }
+
+  /* line 469, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-1-3 {
+    width: 32.7%; }
+
+  /* line 473, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-l-1-3 {
+    margin-left: 33.3333%; }
+
+  /* line 477, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-l-1-3 {
+    left: 33.3333%; }
+
+  /* line 481, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-l-1-3 {
+    left: -33.3333%; }
+
+  /* line 485, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-2-3 {
+    width: 66.6667%; }
+
+  /* line 489, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-l-2-3 {
+    margin-left: 66.6667%; }
+
+  /* line 493, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-l-2-3 {
+    left: 66.6667%; }
+
+  /* line 497, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-l-2-3 {
+    left: -66.6667%; }
+
+  /* line 501, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-1-4 {
+    width: 24.4%; }
+
+  /* line 505, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-l-1-4 {
+    margin-left: 25%; }
+
+  /* line 509, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-l-1-4 {
+    left: 25%; }
+
+  /* line 513, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-l-1-4 {
+    left: -25%; }
+
+  /* line 517, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-3-4 {
+    width: 75%; }
+
+  /* line 521, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-offset-l-3-4 {
+    margin-left: 75%; }
+
+  /* line 525, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-push-l-3-4 {
+    left: 75%; }
+
+  /* line 529, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-pull-l-3-4 {
+    left: -75%; }
+
+  /* line 533, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  .unit-l-1-2, .unit-l-1-3, .unit-l-2-3, .unit-l-1-4, .unit-l-3-4 {
+    display: inline-block;
+    visibility: visible; }
+
+  /* line 538, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/grid */
+  unit-l-90 {
+    width: 90%; }
+ }
+
+/* line 1, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+html {
+  font-family: sans-serif; }
+
+@media only screen and (min-width: 60em) {
+  /* line 7, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+  html {
+    font-size: 110%; }
+ }
+
+@media only screen and (min-width: 90em) {
+  /* line 15, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+  html {
+    font-size: 120%; }
+ }
+
+@media only screen and (min-width: 120em) {
+  /* line 23, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+  html {
+    font-size: 130%; }
+ }
+
+/* line 32, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, blockquote, details, hr, fieldset, pre, table {
+  margin: 0 0 1.5rem; }
+
+/* line 36, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.yotta {
+  font-size: 8.2807rem;
+  line-height: 1.3154;
+  font-family: 'Lato', sans-serif;
+  color: #6c6c6c;
+  text-align: center; }
+
+/* line 44, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.zetta {
+  font-size: 2.0273rem;
+  line-height: 1.4798; }
+
+/* line 50, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+h1, .exa {
+  font-size: 1rem;
+  line-height: 1.6648;
+  font-family: 'Lato', sans-serif; }
+
+/* line 56, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+h2, .peta {
+  font-size: 1.6018rem;
+  line-height: 1.8729;
+  font-family: 'Lato', sans-serif;
+  color: #6c6c6c;
+  text-align: center;
+  padding-top: 1em; }
+
+/* line 65, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+h3, .tera {
+  font-size: 1.4238rem;
+  line-height: 1.0535;
+  font-family: 'Lato', sans-serif;
+  color: #6c6c6c;
+  text-align: center;
+  padding-top: 4em; }
+
+/* line 74, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+h4, .giga {
+  font-size: 1.2656rem;
+  line-height: 1.1852; }
+
+/* line 79, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+h5, .mega {
+  font-size: 1.125rem;
+  line-height: 1.3333;
+  font-family: 'Lato', sans-serif;
+  color: #6c6c6c;
+  text-align: center; }
+
+/* line 87, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+h6, .kilo {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+  color: #6c6c6c;
+  text-align: center;
+  padding-top: 4em; }
+
+/* line 96, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+small, .milli {
+  font-size: 0.8889rem;
+  line-height: 1.8875; }
+
+/* line 101, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.micro {
+  font-size: 0.7901rem;
+  line-height: 1.8984; }
+
+/* line 107, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+sub, sup {
+  font-size: 75%;
+  line-height: 1px;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 114, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+sup {
+  top: -0.5em; }
+
+/* line 118, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+sub {
+  bottom: -0.25em; }
+
+/* line 122, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+p {
+  font-size: 0.8889rem;
+  line-height: 1rem;
+  font-family: sans-serif; }
+
+/* line 128, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.text-left {
+  text-align: left; }
+
+/* line 132, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.text-right {
+  text-align: right; }
+
+/* line 136, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.text-center {
+  text-align: center; }
+
+/* line 140, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.push {
+  margin-bottom: 1.5rem; }
+
+/* line 144, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.push-none, .push-0 {
+  padding: 1.5em; }
+
+/* line 148, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.push-double, .push-2 {
+  margin-bottom: 3rem; }
+
+/* line 152, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.push-half, .push-1-2 {
+  margin-bottom: 0.75rem; }
+
+/* line 156, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.pad-top, .pad-t {
+  padding-top: 1.5rem; }
+
+/* line 160, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.pad-bottom, .pad-b {
+  padding-bottom: 1.5rem; }
+
+/* line 164, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.pad-top-double, .pad-t-2 {
+  padding-top: 3rem; }
+
+/* line 168, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.pad-bottom-double, .pad-b-2 {
+  padding-bottom: 3rem; }
+
+/* line 172, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.pad-top-half, .pad-t-1-2 {
+  padding-top: 0.75rem; }
+
+/* line 176, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.pad-bottom-half, .pad-b-1-2 {
+  padding-bottom: 0.75rem; }
+
+/* line 180, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.island {
+  padding: 1.5rem; }
+
+/* line 184, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.island-half, .island-1-2 {
+  padding: 0.75rem; }
+
+/* line 188, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.island-double, .island-2 {
+  padding: 3rem; }
+
+/* line 192, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.gutter {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+
+/* line 197, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.gutter-half, .gutter-1-2 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem; }
+
+/* line 202, /Users/ivylabossiere/Desktop/exercise-2-scss/scss/components/typography */
+.gutter-double, .gutter-2 {
+  padding-left: 3rem;
+  padding-right: 3rem; }
+/*# sourceMappingURL=style.css.map */
