@@ -56,8 +56,8 @@ h1, .exa {
 h2, .peta {
   font-size: 1.6018rem;
   line-height: 1.8729;
-  font-family: 'Lato', sans-serif;
-  color: #6c6c6c;
+  font-family: $lato;
+  color: $title;
   text-align: center;
   padding-top: 1em;
 }
